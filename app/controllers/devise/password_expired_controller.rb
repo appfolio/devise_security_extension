@@ -18,7 +18,7 @@ class Devise::PasswordExpiredController < DeviseController
       redirect_to stored_location_for(scope) || :root
     else
       clean_up_passwords(resource)
-      respond_with(resource, action: :show)
+      respond_with(resource, :action => :show)
     end
   end
 
