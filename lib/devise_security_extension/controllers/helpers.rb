@@ -4,14 +4,14 @@ module DeviseSecurityExtension
       extend ActiveSupport::Concern
 
       included do
-        before_filter :handle_password_change
+        before_action :handle_password_change
       end
-      
+
       module ClassMethods
         # helper for captcha
         def init_recover_password_captcha
           include RecoverPasswordCaptcha
-        end        
+        end
       end
 
       module RecoverPasswordCaptcha
@@ -48,9 +48,9 @@ module DeviseSecurityExtension
           change_path = "#{scope}_password_expired_path"
           send(change_path)
         end
-        
+
         protected
-        
+
         # allow to overwrite for some special handlings
         def ignore_password_expire?
           false
