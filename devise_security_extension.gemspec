@@ -5,7 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = "devise_security_extension"
-  s.version = "0.8.0"
+  lib = File.expand_path('../lib', __FILE__)
+  $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+  require 'devise_security_extension/version'
+  s.version = DeviseSecurityExtension::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marco Scholl", "Alexander Dreher"]
@@ -72,24 +75,18 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<rails>, [">= 3.1.1"])
       s.add_runtime_dependency(%q<devise>, [">= 2.0.0"])
       s.add_development_dependency(%q<rails_email_validator>, [">= 0"])
-      s.add_development_dependency(%q<easy_captcha>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
     else
       s.add_dependency(%q<rails>, [">= 3.1.1"])
       s.add_dependency(%q<devise>, [">= 2.0.0"])
       s.add_dependency(%q<rails_email_validator>, [">= 0"])
-      s.add_dependency(%q<easy_captcha>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
     end
   else
     s.add_dependency(%q<rails>, [">= 3.1.1"])
     s.add_dependency(%q<devise>, [">= 2.0.0"])
     s.add_dependency(%q<rails_email_validator>, [">= 0"])
-    s.add_dependency(%q<easy_captcha>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
   end
 end
 
