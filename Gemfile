@@ -8,8 +8,7 @@ gem "devise", ">= 2.0.0"
 # Include everything needed to run rake, tests, features, etc.
 group :development do
   gem "rails_email_validator"
-  gem "easy_captcha"
   gem "bundler", ">= 1.0.0"
-  gem "jeweler", "~> 1.8.4"
+  gem 'af_gems', '~> 6.0', source: 'https://gemini.atl.appfolio.net'
 #  gem "rcov", ">= 0"
 end
