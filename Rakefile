@@ -9,18 +9,6 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "devise_security_extension"
-  gem.homepage = "http://github.com/phatworx/devise_security_extension"
-  gem.license = "MIT"
-  gem.summary = %Q{Security extension for devise}
-  gem.description = %Q{An enterprise security extension for devise, trying to meet industrial standard security demands for web applications.}
-  gem.email = "team@phatworx.de"
-  gem.authors = ["Marco Scholl", "Alexander Dreher"]
-end
-Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
